@@ -1,5 +1,8 @@
 module.exports = {
     entry  : './src/index.jsx',
+    devServer: {
+        headers: { "Access-Control-Allow-Origin": "*" }
+    },
     output: {
         path: __dirname + '/public/js',
         filename: 'bundle.js'
