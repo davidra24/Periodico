@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Periodico from './components/Periodico.jsx';
+import Secciones from './components/Secciones.jsx';
+import Articulos from './components/Articulos.jsx';
 
 render(
-    <Periodico/>
-    , document.getElementById('reactApp')
+    <Secciones/>
+    , document.getElementById('secciones')
+);
+render(
+    <Articulos/>
+    , document.getElementById('articulos')
 );
