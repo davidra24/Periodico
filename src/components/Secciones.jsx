@@ -12,7 +12,7 @@ class Secciones extends Component{
 
     componentDidMount(){
         request
-                .get('http://localhost:3000/sections')
+                .get('http://sw-news-letter.herokuapp.com/section')
                 .end((err, res) =>{
                     const secciones = JSON.parse(res.text);
                     this.setState({
@@ -23,9 +23,9 @@ class Secciones extends Component{
 
     render(){
         var secciones = this.state.secciones.map((seccion, i) => {
-            return( <div>
+            return <div>
                 <li key={i}>{seccion.name}</li>
-                </div>)
+                </div>
         });
         return(
             <div>
