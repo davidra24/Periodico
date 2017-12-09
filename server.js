@@ -13,6 +13,13 @@ app.get('/sections', function(req, res){
     }
   });
 });
+app.get('/articles', function(req, res){
+  request.get({url : 'http://sw-news-letter.herokuapp.com/article'}, function(error, response, body){
+    if(!error){
+      res.json(body);
+    }
+  });
+});
 
 app.use(express.static(__dirname + '/public'));
 http.createServer(app).listen(app.get('port'), function(){

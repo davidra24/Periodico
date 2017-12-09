@@ -20461,7 +20461,7 @@ var Articulos = function (_Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            _superagent2.default.get('http://sw-news-letter.herokuapp.com/article').end(function (err, res) {
+            _superagent2.default.get('http://localhost:3000/article').end(function (err, res) {
                 var articulos = JSON.parse(res.text);
                 _this2.setState({
                     articulos: articulos

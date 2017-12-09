@@ -12,7 +12,7 @@ class Articulos extends Component{
    
     componentDidMount(){
         request
-                .get('http://sw-news-letter.herokuapp.com/article')
+                .get('http://localhost:3000/article')
                 .end((err, res) =>{
                     const articulos = JSON.parse(res.text);
                     this.setState({
