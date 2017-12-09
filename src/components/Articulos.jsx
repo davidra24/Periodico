@@ -19,30 +19,43 @@ class Articulos extends Component{
                         articulos : articulos
                     });
                 });
-    }
+        }
 
     render(){
         var articulos = this.state.articulos.map((articulo, i) => {
             var base64;
             base64 = articulo.image;
-            return <div>
+            if(i==0){
+                return (<div>
                     <li id="article" key={i}>
                         <div>
-                            <div>
-                                <img src={"" + base64} />
-                            </div>
-                            <div>{articulo.name}</div>
-                            <div>{articulo.date}</div>
-                            <div>{articulo.abstract}</div>
+                            <img src={"" + base64} width="810" height="444"/>
+                                <div>
+                                    <h3>{articulo.name}</h3>
+                                    <h4>{articulo.date}</h4>
+                                    <p>{articulo.abstract}</p>
+                                </div>
                         </div>
                     </li>
-                </div>
+                </div>)
+            }else{
+            return (<div>
+                    <li id="article" key={i}>
+                        <div>
+                            <img src={"" + base64} width="405" height="222"/>
+                                <div>
+                                    <h3>{articulo.name}</h3>
+                                    <h4>{articulo.date}</h4>
+                                    <p>{articulo.abstract}</p>
+                                </div>
+                        </div>
+                    </li>
+                </div>)
+            }
         });
         return(
             <div>
-                <ul>
-                    {articulos}
-                </ul>
+                {articulos}
             </div>
         )
     }

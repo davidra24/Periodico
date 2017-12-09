@@ -23,15 +23,13 @@ class Secciones extends Component{
 
     render(){
         var secciones = this.state.secciones.map((seccion, i) => {
-            return <div>
+            return( <div>
                 <li key={i}>{seccion.name}</li>
-                </div>
+                </div>)
         });
         return(
             <div>
-                <ul>
-                    {secciones}
-                </ul>
+                {secciones}
             </div>
         )
     }

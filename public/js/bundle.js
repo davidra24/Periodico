@@ -1902,7 +1902,10 @@ var _Articulos2 = _interopRequireDefault(_Articulos);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _reactDom.render)(_react2.default.createElement(_Secciones2.default, null), document.getElementById('secciones'));
+// render(
+//     <Secciones/>
+//     , document.getElementById('secciones')
+// );
 (0, _reactDom.render)(_react2.default.createElement(_Articulos2.default, null), document.getElementById('articulos'));
 
 /***/ }),
@@ -19285,11 +19288,7 @@ var Secciones = function (_Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(
-                    'ul',
-                    null,
-                    secciones
-                )
+                secciones
             );
         }
     }]);
@@ -20475,47 +20474,78 @@ var Articulos = function (_Component) {
             var articulos = this.state.articulos.map(function (articulo, i) {
                 var base64;
                 base64 = articulo.image;
-                return _react2.default.createElement(
-                    'div',
-                    null,
-                    _react2.default.createElement(
-                        'li',
-                        { id: 'article', key: i },
+                if (i == 0) {
+                    return _react2.default.createElement(
+                        'div',
+                        null,
                         _react2.default.createElement(
-                            'div',
-                            null,
+                            'li',
+                            { id: 'article', key: i },
                             _react2.default.createElement(
                                 'div',
                                 null,
-                                _react2.default.createElement('img', { src: "" + base64 })
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                null,
-                                articulo.name
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                null,
-                                articulo.date
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                null,
-                                articulo.abstract
+                                _react2.default.createElement('img', { src: "" + base64, width: '810', height: '444' }),
+                                _react2.default.createElement(
+                                    'div',
+                                    null,
+                                    _react2.default.createElement(
+                                        'h3',
+                                        null,
+                                        articulo.name
+                                    ),
+                                    _react2.default.createElement(
+                                        'h4',
+                                        null,
+                                        articulo.date
+                                    ),
+                                    _react2.default.createElement(
+                                        'p',
+                                        null,
+                                        articulo.abstract
+                                    )
+                                )
                             )
                         )
-                    )
-                );
+                    );
+                } else {
+                    return _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            { id: 'article', key: i },
+                            _react2.default.createElement(
+                                'div',
+                                null,
+                                _react2.default.createElement('img', { src: "" + base64, width: '405', height: '222' }),
+                                _react2.default.createElement(
+                                    'div',
+                                    null,
+                                    _react2.default.createElement(
+                                        'h3',
+                                        null,
+                                        articulo.name
+                                    ),
+                                    _react2.default.createElement(
+                                        'h4',
+                                        null,
+                                        articulo.date
+                                    ),
+                                    _react2.default.createElement(
+                                        'p',
+                                        null,
+                                        articulo.abstract
+                                    )
+                                )
+                            )
+                        )
+                    );
+                }
             });
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(
-                    'ul',
-                    null,
-                    articulos
-                )
+                articulos
             );
         }
     }]);
