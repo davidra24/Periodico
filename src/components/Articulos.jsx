@@ -1,59 +1,48 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import request from 'superagent';
 
-class Articulos extends Component{
+class Articulos extends Component {
 
-    constructor(){
+    constructor() {
         super();
         this.state = {
-            articulos : []
+            articulos: []
         }
     }
-   
-    componentDidMount(){
-        request
-                .get('http://sw-news-letter.herokuapp.com/article')
-                .end((err, res) =>{
-                    const articulos = JSON.parse(res.text);
-                    this.setState({
-                        articulos : articulos
-                    });
-                });
-        }
 
-    render(){
+    componentDidMount() {
+        request
+            .get('http://sw-news-letter.herokuapp.com/article')
+            .end((err, res) => {
+                const articulos = JSON.parse(res.text);
+                this.setState({
+                    articulos: articulos
+                });
+            });
+    }
+
+    render() {
         var articulos = this.state.articulos.map((articulo, i) => {
             var base64;
             base64 = articulo.image;
-            if(i==0){
-                return (<div>
-                    <li id="article" key={i}>
-                        <div>
-                            <img src={"" + base64} width="810" height="444"/>
-                                <div>
-                                    <h3>{articulo.name}</h3>
-                                    <h4>{articulo.date}</h4>
-                                    <p>{articulo.abstract}</p>
+            return (<div id="article">                        
+                            <div className="row text-center">
+                                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <figure>
+                                        <img className="img-responsive center-block " src={"" + base64} width="640" height="480"/>
+                                        <a href="#">
+                                            <figcaption>
+                                                <h3>{articulo.name}</h3>
+                                                <p>{articulo.date}</p>
+                                                <p>{articulo.abstract}</p>
+                                            </figcaption>
+                                        </a>
+                                    </figure>
                                 </div>
-                        </div>
-                    </li>
-                </div>)
-            }else{
-            return (<div>
-                    <li id="article" key={i}>
-                        <div>
-                            <img src={"" + base64} width="405" height="222"/>
-                                <div>
-                                    <h3>{articulo.name}</h3>
-                                    <h4>{articulo.date}</h4>
-                                    <p>{articulo.abstract}</p>
-                                </div>
-                        </div>
-                    </li>
-                </div>)
-            }
+                            </div>
+                    </div>)
         });
-        return(
+        return (
             <div>
                 {articulos}
             </div>

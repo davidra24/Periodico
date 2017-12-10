@@ -23,9 +23,7 @@ class Secciones extends Component{
 
     render(){
         var secciones = this.state.secciones.map((seccion, i) => {
-            return <div>
-                <li key={i}>{seccion.name}</li>
-                </div>
+            return <li className="dropdown" key={i}><a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button">{seccion.name}</a></li>
         });
         return(
             <div>

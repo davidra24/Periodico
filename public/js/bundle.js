@@ -1902,10 +1902,7 @@ var _Articulos2 = _interopRequireDefault(_Articulos);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// render(
-//     <Secciones/>
-//     , document.getElementById('secciones')
-// );
+(0, _reactDom.render)(_react2.default.createElement(_Secciones2.default, null), document.getElementById('secciones'));
 (0, _reactDom.render)(_react2.default.createElement(_Articulos2.default, null), document.getElementById('articulos'));
 
 /***/ }),
@@ -19276,11 +19273,11 @@ var Secciones = function (_Component) {
         value: function render() {
             var secciones = this.state.secciones.map(function (seccion, i) {
                 return _react2.default.createElement(
-                    'div',
-                    null,
+                    'li',
+                    { className: 'dropdown', key: i },
                     _react2.default.createElement(
-                        'li',
-                        { key: i },
+                        'a',
+                        { href: '#', className: 'dropdown-toggle', 'data-toggle': 'dropdown', role: 'button' },
                         seccion.name
                     )
                 );
@@ -20474,73 +20471,46 @@ var Articulos = function (_Component) {
             var articulos = this.state.articulos.map(function (articulo, i) {
                 var base64;
                 base64 = articulo.image;
-                if (i == 0) {
-                    return _react2.default.createElement(
+                return _react2.default.createElement(
+                    'div',
+                    { id: 'article' },
+                    _react2.default.createElement(
                         'div',
-                        null,
+                        { className: 'row text-center' },
                         _react2.default.createElement(
-                            'li',
-                            { id: 'article', key: i },
+                            'div',
+                            { className: 'col-xs-12 col-sm-12 col-md-12 col-lg-12' },
                             _react2.default.createElement(
-                                'div',
+                                'figure',
                                 null,
-                                _react2.default.createElement('img', { src: "" + base64, width: '810', height: '444' }),
+                                _react2.default.createElement('img', { className: 'img-responsive center-block ', src: "" + base64, width: '640', height: '480' }),
                                 _react2.default.createElement(
-                                    'div',
-                                    null,
+                                    'a',
+                                    { href: '#' },
                                     _react2.default.createElement(
-                                        'h3',
+                                        'figcaption',
                                         null,
-                                        articulo.name
-                                    ),
-                                    _react2.default.createElement(
-                                        'h4',
-                                        null,
-                                        articulo.date
-                                    ),
-                                    _react2.default.createElement(
-                                        'p',
-                                        null,
-                                        articulo.abstract
+                                        _react2.default.createElement(
+                                            'h3',
+                                            null,
+                                            articulo.name
+                                        ),
+                                        _react2.default.createElement(
+                                            'p',
+                                            null,
+                                            articulo.date
+                                        ),
+                                        _react2.default.createElement(
+                                            'p',
+                                            null,
+                                            articulo.abstract
+                                        )
                                     )
                                 )
                             )
                         )
-                    );
-                } else {
-                    return _react2.default.createElement(
-                        'div',
-                        null,
-                        _react2.default.createElement(
-                            'li',
-                            { id: 'article', key: i },
-                            _react2.default.createElement(
-                                'div',
-                                null,
-                                _react2.default.createElement('img', { src: "" + base64, width: '405', height: '222' }),
-                                _react2.default.createElement(
-                                    'div',
-                                    null,
-                                    _react2.default.createElement(
-                                        'h3',
-                                        null,
-                                        articulo.name
-                                    ),
-                                    _react2.default.createElement(
-                                        'h4',
-                                        null,
-                                        articulo.date
-                                    ),
-                                    _react2.default.createElement(
-                                        'p',
-                                        null,
-                                        articulo.abstract
-                                    )
-                                )
-                            )
-                        )
-                    );
-                }
+                    )
+                );
             });
             return _react2.default.createElement(
                 'div',
