@@ -12,7 +12,7 @@ class Secciones extends Component{
 
     componentDidMount(){
         request
-                .get('http://sw-news-letter.herokuapp.com/section')
+                .get('https://sw-news-letter.herokuapp.com/section')
                 .end((err, res) =>{
                     const secciones = JSON.parse(res.text);
                     this.setState({
