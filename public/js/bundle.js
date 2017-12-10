@@ -20486,7 +20486,7 @@ var Articulos = function (_Component) {
                                 _react2.default.createElement('img', { className: 'img-responsive center-block ', src: "" + base64, width: '640', height: '480' }),
                                 _react2.default.createElement(
                                     'a',
-                                    { href: '#articulo-completo', className: '', 'data-toggle': 'modal' },
+                                    { href: '#articulo-completo' + i, className: '', 'data-toggle': 'modal' },
                                     _react2.default.createElement(
                                         'figcaption',
                                         null,
@@ -20506,52 +20506,52 @@ var Articulos = function (_Component) {
                                             articulo.abstract
                                         )
                                     )
-                                ),
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'modal fade', id: 'articulo-completo' + i },
                                 _react2.default.createElement(
                                     'div',
-                                    { className: 'modal fade', id: 'articulo-completo' },
+                                    { className: 'modal-dialog' },
                                     _react2.default.createElement(
                                         'div',
-                                        { className: 'modal-dialog' },
+                                        { className: 'modal-content' },
                                         _react2.default.createElement(
                                             'div',
-                                            { className: 'modal-content' },
+                                            { className: 'modal-header' },
                                             _react2.default.createElement(
-                                                'div',
-                                                { className: 'modal-header' },
-                                                _react2.default.createElement(
-                                                    'button',
-                                                    { tyle: 'button', className: 'close', 'data-dismiss': 'modal' },
-                                                    '\xD7'
-                                                ),
-                                                _react2.default.createElement(
-                                                    'h3',
-                                                    { className: 'modal-title' },
-                                                    articulo.name
-                                                ),
-                                                _react2.default.createElement(
-                                                    'h6',
-                                                    null,
-                                                    articulo.date
-                                                ),
-                                                _react2.default.createElement(
-                                                    'h6',
-                                                    null,
-                                                    articulo.section
-                                                )
+                                                'button',
+                                                { tyle: 'button', className: 'close', 'data-dismiss': 'modal' },
+                                                '\xD7'
                                             ),
-                                            _react2.default.createElement('img', { className: 'img-responsive center-block ', src: "" + base64 }),
                                             _react2.default.createElement(
-                                                'div',
-                                                { className: 'modal-body' },
-                                                _react2.default.createElement(
-                                                    'p',
-                                                    null,
-                                                    articulo.text
-                                                )
+                                                'h3',
+                                                { className: 'modal-title' },
+                                                articulo.name
                                             ),
-                                            _react2.default.createElement('div', { className: 'modal-footer' })
-                                        )
+                                            _react2.default.createElement(
+                                                'h6',
+                                                null,
+                                                articulo.date
+                                            ),
+                                            _react2.default.createElement(
+                                                'h6',
+                                                null,
+                                                articulo.section
+                                            )
+                                        ),
+                                        _react2.default.createElement('img', { className: 'img-responsive center-block ', src: "" + base64 }),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'modal-body' },
+                                            _react2.default.createElement(
+                                                'p',
+                                                null,
+                                                articulo.text
+                                            )
+                                        ),
+                                        _react2.default.createElement('div', { className: 'modal-footer' })
                                     )
                                 )
                             )
