@@ -12,7 +12,7 @@ class Articulos extends Component {
 
     componentDidMount() {
         request
-            .get('https://sw-news-letter.herokuapp.com/article')
+            .get('http://sw-news-letter.herokuapp.com/article')
             .end((err, res) => {
                 const articulos = JSON.parse(res.text);
                 this.setState({
@@ -30,13 +30,32 @@ class Articulos extends Component {
                                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <figure>
                                         <img className="img-responsive center-block " src={"" + base64} width="640" height="480"/>
-                                        <a href="#">
+                                        <a href="#articulo-completo" className="" data-toggle="modal">
                                             <figcaption>
                                                 <h3>{articulo.name}</h3>
                                                 <p>{articulo.date}</p>
                                                 <p>{articulo.abstract}</p>
                                             </figcaption>
                                         </a>
+                                        {/* Dialogo modal */}
+                                        <div className="modal fade" id="articulo-completo">
+                                            <div className="modal-dialog">
+                                                <div className="modal-content">
+                                                    {/* header de la ventana */}
+                                                    <div className="modal-header">
+                                                        <button tyle="button" class="close" data-dismiss="modal" aria-hiden="true">&times;</button>
+                                                        <h3 class="modal-title">{articulo.name}</h3>
+                                                        <h6>{articulo.date}</h6>
+                                                        <h6>{articulo.section}</h6>
+                                                    </div>
+                                                    {/* Contenido de la ventana */}
+                                                    <img className="img-responsive center-block " src={"" + base64}/>
+                                                    <div className="modal-body">
+                                                        <p>{articulo.text}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </figure>
                                 </div>
                             </div>

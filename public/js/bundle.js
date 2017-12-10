@@ -20486,7 +20486,7 @@ var Articulos = function (_Component) {
                                 _react2.default.createElement('img', { className: 'img-responsive center-block ', src: "" + base64, width: '640', height: '480' }),
                                 _react2.default.createElement(
                                     'a',
-                                    { href: '#' },
+                                    { href: '#articulo-completo', className: '', 'data-toggle': 'modal' },
                                     _react2.default.createElement(
                                         'figcaption',
                                         null,
@@ -20504,6 +20504,52 @@ var Articulos = function (_Component) {
                                             'p',
                                             null,
                                             articulo.abstract
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'modal fade', id: 'articulo-completo' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'modal-dialog' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'modal-content' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'modal-header' },
+                                                _react2.default.createElement(
+                                                    'button',
+                                                    { tyle: 'button', 'class': 'close', 'data-dismiss': 'modal', 'aria-hiden': 'true' },
+                                                    '\xD7'
+                                                ),
+                                                _react2.default.createElement(
+                                                    'h3',
+                                                    { 'class': 'modal-title' },
+                                                    articulo.name
+                                                ),
+                                                _react2.default.createElement(
+                                                    'h6',
+                                                    null,
+                                                    articulo.date
+                                                ),
+                                                _react2.default.createElement(
+                                                    'h6',
+                                                    null,
+                                                    articulo.section
+                                                )
+                                            ),
+                                            _react2.default.createElement('img', { className: 'img-responsive center-block ', src: "" + base64 }),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'modal-body' },
+                                                _react2.default.createElement(
+                                                    'p',
+                                                    null,
+                                                    articulo.text
+                                                )
+                                            )
                                         )
                                     )
                                 )
