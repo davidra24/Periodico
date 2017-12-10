@@ -43,8 +43,8 @@ class Articulos extends Component {
                                                 <div className="modal-content">
                                                     {/* header de la ventana */}
                                                     <div className="modal-header">
-                                                        <button tyle="button" class="close" data-dismiss="modal" aria-hiden="true">&times;</button>
-                                                        <h3 class="modal-title">{articulo.name}</h3>
+                                                        <button tyle="button" className="close" data-dismiss="modal" >&times;</button>
+                                                        <h3 className="modal-title">{articulo.name}</h3>
                                                         <h6>{articulo.date}</h6>
                                                         <h6>{articulo.section}</h6>
                                                     </div>

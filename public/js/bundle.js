@@ -20521,12 +20521,12 @@ var Articulos = function (_Component) {
                                                 { className: 'modal-header' },
                                                 _react2.default.createElement(
                                                     'button',
-                                                    { tyle: 'button', 'class': 'close', 'data-dismiss': 'modal', 'aria-hiden': 'true' },
+                                                    { tyle: 'button', className: 'close', 'data-dismiss': 'modal' },
                                                     '\xD7'
                                                 ),
                                                 _react2.default.createElement(
                                                     'h3',
-                                                    { 'class': 'modal-title' },
+                                                    { className: 'modal-title' },
                                                     articulo.name
                                                 ),
                                                 _react2.default.createElement(
