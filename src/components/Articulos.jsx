@@ -53,6 +53,10 @@ class Articulos extends Component {
                                                     <div className="modal-body">
                                                         <p>{articulo.text}</p>
                                                     </div>
+                                                    {/* footer */}
+                                                    <div className="modal-footer">
+                                                        
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

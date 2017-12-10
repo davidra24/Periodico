@@ -20549,7 +20549,8 @@ var Articulos = function (_Component) {
                                                     null,
                                                     articulo.text
                                                 )
-                                            )
+                                            ),
+                                            _react2.default.createElement('div', { className: 'modal-footer' })
                                         )
                                     )
                                 )
