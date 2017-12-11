@@ -19285,8 +19285,136 @@ var Secciones = function (_Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                secciones
-            );
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'navbar-form navbar-left', role: 'search' },
+                        secciones,
+                        '\xA0',
+                        _react2.default.createElement('input', { type: 'text', className: 'form-control', placeholder: 'Buscar' }),
+                        '\xA0',
+                        _react2.default.createElement(
+                            'button',
+                            { type: 'submit', className: 'form-control' },
+                            _react2.default.createElement('span', { className: 'glyphicon glyphicon-search ' })
+                        ),
+                        '\xA0',
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'http://facebook.com', className: 'btn btn-social-icon btn-facebook' },
+                            _react2.default.createElement(
+                                'span',
+                                { className: 'fa fa-facebook' },
+                                'f'
+                            )
+                        ),
+                        '\xA0',
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'http://twitter.com', className: 'btn btn-social-icon btn-twitter' },
+                            _react2.default.createElement(
+                                'span',
+                                { className: 'fa fa-twitter' },
+                                't'
+                            )
+                        ),
+                        '\xA0',
+                        _react2.default.createElement(
+                            'a',
+                            { href: '#login', className: '', 'data-toggle': 'modal' },
+                            '\xA0',
+                            _react2.default.createElement(
+                                'button',
+                                { type: 'submit', className: 'form-control' },
+                                ' Ingresar '
+                            ),
+                            '\xA0'
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'modal fade', id: 'login' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'modal-dialog' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'modal-content' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'modal-header' },
+                                        _react2.default.createElement(
+                                            'button',
+                                            { type: 'button', className: 'close', 'data-dismiss': 'modal' },
+                                            '\xD7'
+                                        ),
+                                        _react2.default.createElement(
+                                            'h3',
+                                            { className: 'modal-title' },
+                                            'Ingresar'
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'modal-body' },
+                                        _react2.default.createElement(
+                                            'form',
+                                            { className: 'form-horizontal', role: 'form' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'form-group' },
+                                                _react2.default.createElement(
+                                                    'label',
+                                                    { className: 'col-sm-2 control-label', htmlFor: 'inputUser' },
+                                                    'Usuario'
+                                                ),
+                                                _react2.default.createElement('br', null),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'col-sm-10' },
+                                                    _react2.default.createElement('br', null),
+                                                    _react2.default.createElement('input', { type: 'text', className: 'form-control',
+                                                        id: 'usuario', placeholder: 'Usuario' })
+                                                )
+                                            ),
+                                            _react2.default.createElement('br', null),
+                                            _react2.default.createElement('br', null),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'form-group' },
+                                                _react2.default.createElement(
+                                                    'label',
+                                                    { className: 'col-sm-2 control-label',
+                                                        htmlFor: 'inputPassword3' },
+                                                    'Password'
+                                                ),
+                                                _react2.default.createElement('br', null),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'col-sm-10' },
+                                                    _react2.default.createElement('br', null),
+                                                    _react2.default.createElement('input', { type: 'password', className: 'form-control',
+                                                        id: 'inputPassword3', placeholder: 'Password' })
+                                                )
+                                            )
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'modal-footer' },
+                                        _react2.default.createElement(
+                                            'button',
+                                            { type: 'button', className: 'btn btn-primary' },
+                                            'Ingresar'
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            ); /////////////// TERMINA RETURN
         }
     }]);
 
